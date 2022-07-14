@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edTxtFirstName"
+        android:layout_width="128dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="75dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/edTxtWeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edTxtLastName"
+        android:layout_width="128dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Second Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edTxtFirstName"
+        app:layout_constraintStart_toStartOf="@+id/edTxtFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtFirstName" />
+
+    <EditText
+        android:id="@+id/edTxtGender"
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Gender"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/edTxtLastName"
+        app:layout_constraintStart_toStartOf="@+id/edTxtLastName"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtLastName" />
+
+    <EditText
+        android:id="@+id/edTxtWeight"
+        android:layout_width="128dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="Weight"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edTxtFirstName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edTxtHeight"
+        android:layout_width="128dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Height"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/edTxtWeight"
+        app:layout_constraintStart_toStartOf="@+id/edTxtWeight"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtWeight" />
+
+    <EditText
+        android:id="@+id/edTxtBasicSalary"
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Basic Salary"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/edTxtHeight"
+        app:layout_constraintStart_toStartOf="@+id/edTxtHeight"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtHeight" />
+
+    <Button
+        android:id="@+id/btnBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="BMI"
+        app:layout_constraintEnd_toStartOf="@+id/btnNetSalary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtGender"
+        android:onClick="onBMIClick"/>
+
+    <Button
+        android:id="@+id/btnNetSalary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="SALARY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnBMI"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtBasicSalary"
+        android:onClick="onSalClick"/>
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="155dp"
+        android:text="Name:"
+        app:layout_constraintBottom_toTopOf="@+id/txtBMI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTxtGender" />
+
+    <TextView
+        android:id="@+id/txtBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="BMI:"
+        app:layout_constraintEnd_toEndOf="@+id/txtName"
+        app:layout_constraintStart_toStartOf="@+id/txtName"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/txtNetSalary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Net Salary:"
+        app:layout_constraintEnd_toEndOf="@+id/txtBMI"
+        app:layout_constraintStart_toStartOf="@+id/txtBMI"
+        app:layout_constraintTop_toBottomOf="@+id/txtBMI" />
+
+    <TextView
+        android:id="@+id/txtGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Gender:"
+        app:layout_constraintEnd_toEndOf="@+id/txtNetSalary"
+        app:layout_constraintStart_toStartOf="@+id/txtNetSalary"
+        app:layout_constraintTop_toBottomOf="@+id/txtNetSalary" />
+</androidx.constraintlayout.widget.ConstraintLayout>
