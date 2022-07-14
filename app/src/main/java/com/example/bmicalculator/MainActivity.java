@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         edTxtName.setText("Name: " + FName + " " + LName);
         EditText edTxtGender = findViewById(R.id.edTxtGender);
         TextView txtGender = findViewById(R.id.txtGender);
-        txtGender.setText("Gender: " + edTxtGender.getText().toString());
+        txtGender.setText("Gender: " + edTxtGender.getText().toString()) ;
 
     }
 }
